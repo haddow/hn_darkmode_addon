@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Hacker News Dark Mode",
+  "version": "1.0",
+  "description": "A Firefox extension that applies a dark mode theme to news.ycombinator.com",
+  "icons": {
+      "48": "icons/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://news.ycombinator.com/*"],
+      "css": ["darkmode.css"]
+    }
+  ],
+  "permissions": ["<all_urls>"],
+  "browser_action": {
+    "default_icon": {
+      "48": "icons/icon.png"
+    },
+    "default_title": "Hacker News Dark Mode"
+  }
+}
